@@ -20,5 +20,9 @@ func main() {
 		m.Broadcast(msg)
 	})
 
-	r.Run(":5000")
+	err := r.Run(":8081")
+
+	if err != nil {
+		panic(err)
+	}
 }
